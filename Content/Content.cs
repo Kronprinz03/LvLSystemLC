@@ -7,9 +7,8 @@ using UnityEngine;
 using Unity.Netcode.Components;
 using LethalLib.Modules;
 using LvLSystemLC.Behaviours;
-
-
-
+using System.Linq;
+using LvLSystemLC.Extras;
 
 
 namespace LvLSystemLC
@@ -56,9 +55,15 @@ namespace LvLSystemLC
                 Prefabs.Add(item.Name, itemAsset.spawnPrefab);
                 NetworkPrefabs.RegisterNetworkPrefab(itemAsset.spawnPrefab);
                 item.ActionOnItem(itemAsset);
+                
+                
+                var itemInfo = MainAssets.LoadAsset<TerminalNode>(item.InfoPath);
+                logger.LogInfo($"Registering shop item {item.Name} with price {((AdditionalItemForShop)item).itemPrice}");
+                Items.RegisterShopItem(itemAsset, null, null, itemInfo, ((AdditionalItemForShop)item).itemPrice);
             }
             
             var devMenu = MainAssets.LoadAsset<GameObject>("Assets/Custom/LethalThings/DevMenu.prefab");
+            
 
             NetworkPrefabs.RegisterNetworkPrefab(devMenu);
 
@@ -82,7 +87,7 @@ namespace LvLSystemLC
             }
             catch (Exception e)
             {
-                logger.LogError("");
+                logger.LogError(e.Message);
             }
             logger.LogInfo("Custom content loaded!");
         }

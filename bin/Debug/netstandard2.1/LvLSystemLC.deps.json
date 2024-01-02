@@ -14,8 +14,10 @@
           "BepInEx.PluginInfoProps": "1.1.0",
           "UnityEngine.Modules": "2022.3.9",
           "Assembly-CSharp": "0.0.0.0",
-          "TerminalApi": "1.4.0.0",
-          "Unity.InputSystem": "1.7.0.0"
+          "LethalLib": "1.0.0.0",
+          "Unity.InputSystem": "1.7.0.0",
+          "Unity.Netcode.Components": "0.0.0.0",
+          "Unity.Netcode.Runtime": "0.0.0.0"
         },
         "runtime": {
           "LvLSystemLC.dll": {}
@@ -363,11 +365,11 @@
           }
         }
       },
-      "TerminalApi/1.4.0.0": {
+      "LethalLib/1.0.0.0": {
         "runtime": {
-          "TerminalApi.dll": {
-            "assemblyVersion": "1.4.0.0",
-            "fileVersion": "1.4.0.0"
+          "LethalLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -376,6 +378,14 @@
           "Unity.InputSystem.dll": {
             "assemblyVersion": "1.7.0.0",
             "fileVersion": "1.7.0.0"
+          }
+        }
+      },
+      "Unity.Netcode.Components/0.0.0.0": {
+        "runtime": {
+          "Unity.Netcode.Components.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -459,14 +469,6 @@
           }
         }
       },
-      "Unity.Netcode.Components/0.0.0.0": {
-        "runtime": {
-          "Unity.Netcode.Components.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
-      },
       "Unity.AI.Navigation/0.0.0.0": {
         "runtime": {
           "Unity.AI.Navigation.dll": {
@@ -488,6 +490,14 @@
           "ClientNetworkTransform.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Unity.Mathematics/1.0.0.0": {
+        "runtime": {
+          "Unity.Mathematics.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -536,14 +546,6 @@
           "Unity.Multiplayer.Tools.NetStatsReporting.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Unity.Mathematics/1.0.0.0": {
-        "runtime": {
-          "Unity.Mathematics.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -930,12 +932,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "TerminalApi/1.4.0.0": {
+    "LethalLib/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "Unity.InputSystem/1.7.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity.Netcode.Components/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -990,11 +997,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Unity.Netcode.Components/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Unity.AI.Navigation/0.0.0.0": {
       "type": "reference",
       "serviceable": false,
@@ -1006,6 +1008,11 @@
       "sha512": ""
     },
     "ClientNetworkTransform/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Unity.Mathematics/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1036,11 +1043,6 @@
       "sha512": ""
     },
     "Unity.Multiplayer.Tools.NetStatsReporting/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Unity.Mathematics/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

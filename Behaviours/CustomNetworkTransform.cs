@@ -59,14 +59,18 @@ namespace LvLSystemLC.Behaviours
                     }
                 }
 
-                if (syncScale)
+                if (!syncScale)
                 {
-                    if (Vector3.Distance(transform.localScale, _lastScale) > scaleDiffLimit)
-                    {
-                        _lastScale = transform.localScale;
-                        UpdateScaleClientRpc(transform.localScale);
-                    }
+                    return;
                 }
+
+                if (!(Vector3.Distance(transform.localScale, _lastScale) > scaleDiffLimit))
+                {
+                    return;
+                }
+                _lastScale = transform.localScale;
+                UpdateScaleClientRpc(transform.localScale);
+                
             }
             else
             {
