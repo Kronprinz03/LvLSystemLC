@@ -24,7 +24,6 @@ namespace LvLSystemLC
             GameObject DevMenuPrefab = null;
             AssetBundle MainAssets = null;
             
-            
             LoadAssets(logger, MainAssets);
             LoadAdditionalItems(logger, Prefabs, DevMenuPrefab, MainAssets);
             LoadAdditionalMapObject(logger, Prefabs, DevMenuPrefab, MainAssets);
@@ -32,7 +31,6 @@ namespace LvLSystemLC
             var devMenu = MainAssets.LoadAsset<GameObject>("Assets/Custom/Hello/DevMenu.prefab");
             NetworkPrefabs.RegisterNetworkPrefab(devMenu);
             DevMenuPrefab = devMenu;
-
             try
             {
                 var types = Assembly.GetExecutingAssembly().GetLoadableTypes();
