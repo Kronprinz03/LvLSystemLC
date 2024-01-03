@@ -12,16 +12,18 @@ public class AdditionalItem
     public Action<Item> ActionOnItem { get; set; } = null;
     
     public bool Enabled { get; set; } = true;
-    public AdditionalItem(ItemInfo itemInfo)
+    public AdditionalItem(ItemInfo itemInfo, bool? enabled)
     {
         Name = itemInfo.Name;
         ItemPath = itemInfo.ItemPath;
         InfoPath = itemInfo.InfoPath;
         ActionOnItem = itemInfo.ItemAction;
+        Enabled = enabled ?? true;
     }
 
-    public static AdditionalItem Add(ItemInfo itemInfo)
+    public static AdditionalItem Add(ItemInfo itemInfo, bool Enabled)
     {
-        return new AdditionalItem(itemInfo);
+        
+        return new AdditionalItem(itemInfo, Enabled);
     }
 }

@@ -12,6 +12,6 @@ public class Config
     {
         portalGunPrice = configFile.Bind<int>("Item", "PortalGunPrice", 1000, "Where do you think you are going?");
         portalGunWeight = configFile.Bind<int>("Item", "PortalGunWeight", 10, "Where do you think you are going?");
-        portalGunEnabled = configFile.Bind<bool>("Item", "PortalGunEnable", true, "Where do you think you are going?");    
+        portalGunEnabled = configFile.Bind<bool>("Item", "PortalGunEnable", true, "Where do you think you are going?"); 
     }
 }

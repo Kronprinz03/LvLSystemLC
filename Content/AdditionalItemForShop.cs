@@ -5,14 +5,14 @@ namespace LvLSystemLC;
 public class AdditionalItemForShop : AdditionalItem
 {
     public int itemPrice = 0;
-    public AdditionalItemForShop(ItemInfo itemInfo) : base(itemInfo)
+    public AdditionalItemForShop(ItemInfo itemInfo,bool enabled, int itemPrice = 0) : base(itemInfo, enabled)
     {
         this.itemPrice = itemPrice;
     }
-    
+   
 
     public AdditionalItemForShop(string name, string itemPath, string infoPath = null, int itemPrice = 0,
-        Action<Item> action = null) : base(new ItemInfo(name, itemPath, infoPath, action))
+        Action<Item> action = null) : base(new ItemInfo(name, itemPath, infoPath, action), null)
     {
         this.itemPrice = itemPrice;
     }

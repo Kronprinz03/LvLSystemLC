@@ -14,5 +14,15 @@ public class ItemInfo
         ItemPath = itemPath;
         InfoPath = infoPath;
         ItemAction = itemAction;
+        
+    }
+
+    public ItemInfo newItemInfo(string name, string itemPath, string infoPath, Action<Item> itemAction)
+    {
+        Name = name;
+        ItemPath = itemPath;
+        InfoPath = infoPath;
+        ItemAction = itemAction;
+        return this;
     }
 }
