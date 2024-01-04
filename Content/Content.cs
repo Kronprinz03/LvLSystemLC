@@ -9,7 +9,6 @@ using LethalLib.Modules;
 using LvLSystemLC.Behaviours;
 using LethalLib.Extras;
 using LvLSystemLC.Extras;
-using LvLSystemLC.MonoBehaviors;
 
 
 namespace LvLSystemLC
@@ -87,7 +86,7 @@ namespace LvLSystemLC
                     action: (item) =>
                     {
                         NetworkPrefabs.RegisterNetworkPrefab(
-                            item.spawnPrefab.GetComponent<PortalGun>().portalOrb);
+                            item.spawnPrefab.GetComponent<PortelGun>().portalOrb);
                     },Config.portalGunEnabled.Value)
             };   
             

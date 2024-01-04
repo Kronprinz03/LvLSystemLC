@@ -24,9 +24,13 @@ namespace LvLSystemLC
             
             LvLSystemLC.Config.Load(_config);
             Content.Load(_logger);
+            Utilities.Init();
             Patches.Patches.Load();
-            
+
+            // if (InputCompat.Enabled)
+            //    InputCompat.Init();
             //Loaded Plugin
+            
             _logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
         }
